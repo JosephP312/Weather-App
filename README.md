@@ -10,6 +10,7 @@ Anuyone who wants quick, reliable, and easy-to-read weather information. This ca
 3.) Project Scope:
 Focusing on city search, current weather conditions, 5-day forecasts, outfit recommendations, and basic account changes and customizations. Updates later down the road can include furhter quiality of life imporvments within the app and include widgets and other applications that users can implement later on.
 
+---
 
 Problem Addressing:
 
@@ -18,3 +19,33 @@ There are a ton of apps out there that offer the weather and information that th
 
 2.) Solution Impact:
 Provide a clean, personalized weather data at a glance without too many distractions. Notify the users of severe weather via notifications for areas they might have saved or activtley living in with the location based. The outfit recommendation will translate weather data into actioable advice for the user so they can plan out accordingly.
+
+Platform:
+
+---
+
+1.) Development Enviorment
+Android Studio (latest stable version) as the primary IDE. Language: Kotlin (preferred) with ViewBinding and XML layouts for the UI layer.
+
+2.). Deployment & Ecosystem
+Google Play Store distribution. Backend and services remain inside the Google ecosystem for seamless integration and security.
+
+3.) Target Devices
+Android 8.0 (API 26) and above. Optimized for both phones and tablets (adaptive layouts).
+
+---
+
+ Front/Back End Support:
+
+1.) Frontend Architecture
+Native Android app built in Android Studio. XML layouts with ViewBinding for all screens. Room database for offline-first weather caching so the app remains functional without an internet connection. Retrofit handles all API communication and Glide handles weather icon loading.
+
+2.) Backend Architecture
+The unified backend platform is Google Firebase:
+- Firebase Authentication – user accounts, email/password, Google Sign-In
+- Cloud Firestore – secure storage of saved city profiles and user preferences
+- Firebase Cloud Messaging (FCM) – real-time push notifications for severe weather alerts
+- Firebase Functions – optional serverless triggers for periodic weather refresh and alert scanning
+
+3.) Integration & Security
+All data encrypted in transit and at rest (Firebase default). API keys stored securely in local.properties and never committed to version control. No third-party backend services outside the Google ecosystem.
